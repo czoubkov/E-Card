@@ -1,6 +1,6 @@
 ---
 name: Question
-about: Describe this issue template's purpose here.
+about: Got a complicated question? Post it here.
 title: ''
 labels: question
 assignees: ''
