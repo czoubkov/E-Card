@@ -1,30 +1,89 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-    <title> </title>
-    <link rel="stylesheet" href="./css/active.css">
-
-</head>
+    <head>
+        <title> </title>
+        <link rel="stylesheet" href="./css/active.css">
+        <script src="./js/mycard.js"></script>
+    </head>
 
 <body>
-    <div class="Navbar">
+    <div class="Navbar"> 
         <a href="home.html">Home</a>
         <a href="mycard.html">My Card</a>
         <a href="support.html">Support</a>
     </div>
     <div class="Landing">
-        <img id ="train1" src="./images/train_banner.png" width="" height="">
+        <img id ="train1" src="./images/train_banner.png" width="100%" height="150px">
     </div>
     <div class = "content">
-        <h2>
-            Enter your MetroCard number:
-        </h2>
-        <input type="text">
-        <br>
-        <button> Submit </button>
+
+        <div id = "contentOne">
+
+            <h2> Enter your metrocard number </h2>
+            <div class = "error"><p id = "error">Metrocard # must be a numeric value</p></div>
+            
+            <input type="text" id="metrocardNum" onkeypress=" return onlyNumber(event)">
+            <br>
+            <a class="button" onclick="showContentTwo()"> Enter </a>
+
+        </div>
+
+        <div id = "contentTwo">
+
+            <h2> Metrocard # </h2>
+            <h3> Balance: $10.00</h3>
+            <a class="button" onclick="showContentThree()"> Add funds </a>
+
+        </div>
+
+        <div id = "contentThree">
+            <h3> Add Funds </h3>
+            <h3> Metrocard # </h3>
+            <h4> Balance: $10.00 </h4>
+            <h4 style="display: inline-block;"> Amount: </h4>
+            <input style="width:60px"type="text" id="amount">
+            <br>
+            <a class="button" onclick="showContentFour()"> Pay </a>
+    
+        </div>
+
+        <div id = "contentFour">
+
+            <h2> Metrocard # </h2>
+            <h3> Balance: </h3>
+            <h3> Amount: </h3>
+            <h3> Total: </h3>
+
+            <hr>
+
+            <h2> Billing Info </h2>
+
+            <div class="form">
+                <table>
+                    <tr> <td>First Name</td> <td>Last Name</td></tr>
+                    <tr> <td><input type="text"></td> <td><input type="text"></td></tr>
+                    <tr> <td>City</td> <td>State</td></tr>
+                    <tr> <td><input type="text"></td> <td><input type="text"></td></tr>
+                </table>
+                <table class="two">  
+                    <tr> <td>Billing Address</td></tr>
+                    <tr> <td><input type="text" style="width:100%"></td></tr>
+                </table>
+                <table>  
+                    <tr> <td>Country</td> <td>Zip Code</td></tr>
+                    <tr> <td><input type="text"></td> <td><input type="text"></td></tr>
+                </table>
+                <table class="two">  
+                    <tr> <td>Credit Card Number</td></tr>
+                    <tr> <td><input type="text" style="width:100%"></td></tr>
+                </table>
+            </div>
+    
+        </div>
 
     </div>
 </body>
+<script src="mycard.js"> </script>
 
 </html>

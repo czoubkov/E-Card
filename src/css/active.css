@@ -2,22 +2,20 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background: #f8f8f8;
+}
 .Navbar{
-    background: grey;
+    background: white;
     overflow: hidden;    
 }
-
 .Navbar a{
     float: left;
-    color: #f2f2f2;
+    color: #000000;
     text-align: center;
     padding: 1% 1%;
     text-decoration: none;
     font-size: 18px;
-}
-.Landing{
-    background: lightblue;
-    padding: 3%;
 }
 .content{
     text-align: center;
@@ -28,4 +26,64 @@
     text-align: center;
     font-size: 24px;
     padding: 1% 1%;
+}
+#contentOne{
+    display: block;
+}
+#contentTwo{
+    display: none;
+}
+#contentThree{
+    display: none;
+}
+#contentFour{
+    display: none;
+    text-align: center;
+}
+table{
+    table-layout: fixed;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px;
+}
+table input{
+    width: 100%;   
+}
+td{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#error{
+    display: none;
+    color: rgba(255, 0, 0, 0.5);
+}
+.error{
+    height: 40px;
+    padding-bottom: 10px;
+}
+input[type="text"]{
+    padding: 5px;
+    font-size: 20px;
+}
+.button{
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 40px;
+    padding: 10px;
+    border: 2px solid darkgrey;
+    box-sizing: border-box;
+    background: white;
+    text-decoration:none;
+    font-weight:600;
+    border-radius: 4px;
+    color: rgb(94, 94, 94);   
+}
+.button:hover{
+    color:#DDDDDD;
+    border-color:#DDDDDD;
+}
+.button:active{
+    color:#DDDfff;
+    border-color:#DDffff;
 }
