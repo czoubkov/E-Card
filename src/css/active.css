@@ -87,3 +87,18 @@ input[type="text"]{
     color:#DDDfff;
     border-color:#DDffff;
 }
+
+#rideOptions{
+    text-align: left;
+    position: relative;
+    left: 50%;
+}
+#quickAdd{
+    position: absolute;
+    left:40%;
+    /* display: block;  */
+}
+
+#amount{
+    display:none;
+}

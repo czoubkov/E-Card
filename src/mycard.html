@@ -19,41 +19,54 @@
     <div class = "content">
 
         <div id = "contentOne">
-
             <h2> Enter your metrocard number </h2>
             <div class = "error"><p id = "error">Metrocard # must be a numeric value</p></div>
-            
-            <input type="text" id="metrocardNum" onkeypress=" return onlyNumber(event)">
+            <input type="text" id="metrocardNum" onkeypress=" return onlyNumber(event)" required>
             <br>
             <a class="button" onclick="showContentTwo()"> Enter </a>
 
         </div>
 
         <div id = "contentTwo">
-
-            <h2> Metrocard # </h2>
-            <h3> Balance: $10.00</h3>
+            <h2> Metrocard #<span id="metroNum"></span> </h2>
+            <h3> Balance: $<span id="balance"></span></h3>
             <a class="button" onclick="showContentThree()"> Add funds </a>
 
         </div>
 
         <div id = "contentThree">
             <h3> Add Funds </h3>
-            <h3> Metrocard # </h3>
-            <h4> Balance: $10.00 </h4>
-            <h4 style="display: inline-block;"> Amount: </h4>
-            <input style="width:60px"type="text" id="amount">
+            <h3> Metrocard #<span id="metroNum2"></span> </h3>
+            <h4> Balance: $<span id="balance2"></span> </h4>
             <br>
+            <h4 id="quickAdd"> Quick Add: </h4>
+            <div id = "rideOptions">
+                <form name="myForm">
+                <input type="radio" id="oneRide" name="rides" value="1" onclick="oneride()">
+                <label for="oneRide">1 Ride</label><br>
+                <input type="radio" id="tenRides" name="rides" value="2" onclick="tenrides()">
+                <label for="tenRides">10 Rides</label><br>
+                <input type="radio" id="weekUnlimited" name="rides" value="3" onclick="weekrides()">
+                <label for="weekUnlimited">1 Week Unlimited</label><br>
+                <input type="radio" id="monthUnlimited" name="rides" value="4" onclick="monthrides()">
+                <label for="monthUnlimited">1 Month Unlimited</label><br>
+                <input type="radio" id="otherRide" name="rides" value="5" onclick="otherride()">
+                <label for="otherRide">Other: 
+                    <input style="width:60px"type="text" id="amount" for="otherRide" onkeyup="otherride2()"></label> 
+                </form>
+            </div>
+            <br>
+            <h3> Total Price: $<span id="totalPrice"></span></h3>
             <a class="button" onclick="showContentFour()"> Pay </a>
     
         </div>
 
         <div id = "contentFour">
 
-            <h2> Metrocard # </h2>
-            <h3> Balance: </h3>
-            <h3> Amount: </h3>
-            <h3> Total: </h3>
+            <h2> Metrocard #<span id="metroNum3"></span></h2>
+            <h3> Balance: $<span id="balance3"></span></h3>
+            <h3> Amount: $<span id="amounts"></span></h3>
+            <h3> Total: $<span id="total2"></span></h3>
 
             <hr>
 
@@ -78,6 +91,11 @@
                     <tr> <td>Credit Card Number</td></tr>
                     <tr> <td><input type="text" style="width:100%"></td></tr>
                 </table>
+                <table>  
+                    <tr> <td>CVC Code</td> <td>Expiration Date</td></tr>
+                    <tr> <td><input type="text"></td> <td><input type="text"></td></tr>
+                </table>
+            <a class="button" onclick="alertSuccess()"> Add funds </a>
             </div>
     
         </div>
