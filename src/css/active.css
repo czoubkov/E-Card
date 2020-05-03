@@ -6,7 +6,7 @@ html,body{
     background-size: cover;
     background-position: right top;
 }
-    
+
 #container{
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@ li a{
     text-decoration: none;
     color: #393737;
     background: white;
-    padding: 15px 20px 15px 20px;    
+    padding: 15px 20px 15px 20px;
 }
 li a:hover{
     background: #c7d8e2;
@@ -112,6 +112,7 @@ p{
     background: #9fbbce;
     border-radius: 20px;
     margin: 20px 0;
+    cursor: pointer;
 }
 .button .sel{
     border-radius: 20px;
@@ -154,7 +155,7 @@ table{
     padding: 2px;
 }
 table input{
-    width: 100%;   
+    width: 100%;
 }
 td{
     padding-left: 10px;
