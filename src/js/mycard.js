@@ -92,3 +92,6 @@ function onlyMoneyValues(key) {
 function alertSuccess() {
     alert("Success!");
   }
+function contactSupport(){
+    alert("Submitted to our Support Team!");
+}

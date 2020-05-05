@@ -1,0 +1,75 @@
+.supportContent{
+    height: 65%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+.left{
+    align-items: center; 
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    padding: 0;
+    margin: 0;
+}
+.right h2{
+    background: yellow;
+    padding: 0;
+    margin: 0;
+}
+textarea{
+    display: block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: solid 1px;
+    border-radius: 8px;
+    resize: none;
+}
+table{
+    border: 2px solid black;
+    width: 75%;
+    text-align: center;
+    padding: 0px;
+}
+th{
+    margin: 0;
+    padding: 7.5px;
+    border: 2px solid black;
+}
+td{
+    margin: 0;
+    padding: 7.5px;
+    border: 1px solid black;
+
+}
+tr{
+    padding: 20px;
+}
+.buttonSupport{
+    background: #9fbbce;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 20px;
+    width: 10%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    color: white;
+
+} 
+select{
+    width: 50%;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+

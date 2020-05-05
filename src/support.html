@@ -4,43 +4,58 @@
     <head>
         <title> </title>
         <link rel="stylesheet" href="./css/active.css">
+        <link rel="stylesheet" href="./css/support.css">
+
         <script src="./js/mycard.js"></script>
     </head>
 
 <body>
-      <header>
-          <ul>
-              <li><a href="home.html">Home</a></li>
-              <li><a href="mycard.html">My Card</a></li>
-              <li><a href="support.html">Support</a></li>
-          </ul>
-      </header>
-    <div class="Landing">
-        <img id ="train1" src="./images/train_banner.png" width="100%" height="150px">
-    </div>
-    <div class = "content">
-        <p>
-            Please contact us for questions, comments, concerns or feedback!
-        </p>
-        <table>
-            <tr>
-                <th>Name</th><th>Role</th><th>Email</th>
-            </tr>
-            <tr>
-                <td>Michael Levinson</td><td>Developer</td><td>Michael@gmail.com</td>
-            </tr>
-            <tr>
-                <td>Gregory Ross</td><td>Developer</td><td>Greg@gmail.com</td>
-            </tr>
-            <tr>
-                <td>Katie Solokhina</td><td>Developer</td><td>Katie@gmail.com</td>
-            </tr>
-            <tr>
-                <td>Corey Zoubkov</td><td>Developer</td><td>Corey@gmail.com</td>
-            </tr>
-        </table>
+    <div id = "container">
+        <header>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="mycard.html">My Card</a></li>
+            <li><a href="support.html">Support</a></li>
+        </ul>
+        </header>
+        <h4 style="text-align: center;">Please contact us for questions, comments, concerns or feedback!!</h2>
 
+    <div class="supportContent">
+        <!-- <div class="left"> -->
+        <div class="left">
+            <table>
+                <tr>
+                    <th>Name</th><th>Role</th><th>Email</th>
+                </tr>
+                <tr>
+                    <td>Michael Levinson</td><td>Developer</td><td>Michael@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Gregory Ross</td><td>Developer</td><td>Greg@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Katie Solokhina</td><td>Developer</td><td>Katie@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Corey Zoubkov</td><td>Developer</td><td>Corey@gmail.com</td>
+                </tr>
+            </table>    
+        </div>
+        <div class="right">
+            <select class="selection">
+                <option value="" selected disabled>Please select</option>
+                <option value="support">Support</option>
+                <option value="feedback">Feedback</option>
+                <option value="questions">Questions</option>
+              </select>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <a class="buttonSupport" onclick="contactSupport()"> Submit</a>
+        </div>
     </div>
+    <footer>
+
+    </footer>
+</div>
 </body>
 
 </html>
