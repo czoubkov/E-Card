@@ -7,7 +7,7 @@
     justify-content: center;
 }
 .left{
-    align-items: center; 
+    align-items: center;
 }
 .right{
     display: flex;
@@ -63,13 +63,12 @@ tr{
     transform: translateX(-50%);
     border-radius: 20px;
     color: white;
+    cursor: pointer;
 
-} 
+}
 select{
     width: 50%;
     text-align: center;
     margin-left: 50%;
     transform: translateX(-50%);
 }
-
-
