@@ -114,15 +114,15 @@
                     </table>
                     <table>
                         <tr> <td>Country</td> <td>Zip Code</td></tr>
-                        <tr> <td><input type="number" id="county" required></td> <td><input type="text" id="zip" placeholder="00000" maxlength="5" required></td></tr>
+                        <tr> <td><input type="text" id="county" required></td> <td><input type="text" id="zip" placeholder="00000" maxlength="5" pattern="\d*" required></td></tr>
                     </table>
                     <table class="two">
                         <tr> <td>Credit Card Number</td></tr>
-                        <tr> <td><input type="number" style="width:100%" id="ccn" required></td></tr>
+                        <tr> <td><input type="text" style="width:100%" id="ccn" placeholder="0000 0000 0000 0000" pattern="\d*" required></td></tr>
                     </table>
                     <table>
                         <tr> <td>CVC Number</td> <td>Exp Date</td></tr>
-                        <tr> <td><input type="number" id="cvc" maxlength="3" required></td> <td><input type="text" id="expD" placeholder="00/0000" maxlength="7" required></td></tr>
+                        <tr> <td><input type="text" id="cvc" placeholder="000" maxlength="3" pattern="\d*" required></td> <td><input type="text" id="expD" placeholder="00/0000" maxlength="7" pattern="\d*" required></td></tr>
                     </table>
                     <input type="submit" id="submitP" class="button" onclick="executeSubmit()">
                 </div>
