@@ -10,22 +10,22 @@ var typeOfOrder;
 
 function oneride(){
     typeOfOrder = "Cash Amount";
-    totalPrice = oneRidePrice;    
+    totalPrice = oneRidePrice;
     document.getElementById("totalPrice").innerHTML = "$" + totalPrice;
 }
 function tenrides(){
     typeOfOrder = "Cash Amount"
-    totalPrice = tenRidesPrice;    
+    totalPrice = tenRidesPrice;
     document.getElementById("totalPrice").innerHTML = "$" + totalPrice.toFixed(2);
 }
 function fiveAmount(){
     typeOfOrder = "Cash Amount"
-    totalPrice = 5.00;    
+    totalPrice = 5.00;
     document.getElementById("totalPrice").innerHTML = "$" + totalPrice.toFixed(2);
 }
 function twentyAmount(){
     typeOfOrder = "Cash Amount"
-    totalPrice = 20.00;    
+    totalPrice = 20.00;
     document.getElementById("totalPrice").innerHTML = "$" + totalPrice.toFixed(2);
 }
 function weekrides(){
@@ -68,7 +68,7 @@ function showContentFour(){
     var metroNums = document.getElementById("metrocardNum").value;
     document.getElementById("metroNum3").innerHTML = metroNums;
     document.getElementById("balance3").innerHTML = balance.toFixed(2);
-    
+
 
     if (typeOfOrder == "Cash Amount"){
     document.getElementById("orderType").innerHTML = "Cash Amount";
@@ -124,4 +124,16 @@ function alertSuccess() {
   }
 function contactSupport(){
     alert("Submitted to our Support Team!");
+}
+
+function notNullNumber(){
+  element = document.getElementById("metrocardNum");
+  if (element.value.match(/[0-9]/g)) {
+    showContentTwo();
+    return true;
+  }
+  else {
+    alert("MetroCard Number cannot be blank!");
+    return false;
+  }
 }
