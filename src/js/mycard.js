@@ -119,9 +119,6 @@ function onlyMoneyValues(key) {
     return true;
 }
 
-function alertSuccess() {
-    alert("Success!");
-  }
 function contactSupport(){
     alert("Submitted to our Support Team!");
 }
@@ -137,4 +134,18 @@ function notNullNumber(){
     element.setCustomValidity('MetroCard Number cannot be blank!');
     return false;
   }
+}
+
+function checkSubmit(element){
+  if (!((document.getElementById("firstN") === "") && (document.getElementById("lastN") === "") &&
+  (document.getElementById("city") === "") && (document.getElementById("state") === "") &&
+  (document.getElementById("address") === "") && (document.getElementById("country") === "") &&
+  (document.getElementById("zip") === "") && (document.getElementById("ccn") === "") &&
+  (document.getElementById("cvc") === "") && (document.getElementById("expD") === ""))) {
+    element.disabled = false; }
+
+}
+
+function executeSubmit() {
+  alert("Success!");
 }

@@ -104,27 +104,27 @@
                 <div class="text" >
                     <table>
                         <tr> <td>First Name</td> <td>Last Name</td></tr>
-                        <tr> <td><input type="text" required></td> <td><input type="text" required></td></tr>
+                        <tr> <td><input type="text" id="firstN" onblur="checkSubmit(submitP)" required></td> <td><input type="text" id="lastN" onblur="checkSubmit(submitP)" required></td></tr>
                         <tr> <td>City</td> <td>State</td></tr>
-                        <tr> <td><input type="text" required></td> <td><input type="text" required></td></tr>
+                        <tr> <td><input type="text" id="city" onblur="checkSubmit(submitP)" required></td> <td><input type="text" id="state" onblur="checkSubmit(submitP)" required></td></tr>
                     </table>
                     <table class="two">
                         <tr> <td>Billing Address</td></tr>
-                        <tr> <td><input type="text" style="width:100%" required></td></tr>
+                        <tr> <td><input type="text" style="width:100%" id="address" onblur="checkSubmit(submitP)" required></td></tr>
                     </table>
                     <table>
                         <tr> <td>Country</td> <td>Zip Code</td></tr>
-                        <tr> <td><input type="text" required></td> <td><input type="text" required></td></tr>
+                        <tr> <td><input type="text" id="county" onblur="checkSubmit(submitP)" required></td> <td><input type="text" id="zip" onblur="checkSubmit(submitP)" required></td></tr>
                     </table>
                     <table class="two">
                         <tr> <td>Credit Card Number</td></tr>
-                        <tr> <td><input type="text" style="width:100%" required></td></tr>
+                        <tr> <td><input type="text" style="width:100%" id="ccn" onblur="checkSubmit(submitP)" required></td></tr>
                     </table>
                     <table>
                         <tr> <td>CVC Number</td> <td>Exp Date</td></tr>
-                        <tr> <td><input type="text" required></td> <td><input type="text" required></td></tr>
+                        <tr> <td><input type="text" id="cvc" onblur="checkSubmit(submitP)" required></td> <td><input type="text" id="expD" onblur="checkSubmit(submitP)" required></td></tr>
                     </table>
-                    <input type="submit" class="button" onclick="alertSuccess()">
+                    <input type="submit" id="submitP" class="button" onclick="executeSubmit()" disabled>
                 </div>
             </div>
         </div>

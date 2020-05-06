@@ -135,6 +135,10 @@ input{
     outline:none;
 }
 
+input[type=button], input[type=submit] {
+  border: none;
+}
+
 input:invalid {
   border: 2px solid red;
 }
