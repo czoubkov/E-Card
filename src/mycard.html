@@ -1,138 +1,176 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title> </title>
-        <link rel="stylesheet" href="./css/active.css">
-        <script src="./js/mycard.js"></script>
-    </head>
+
+<head>
+  <title> </title>
+  <link rel="stylesheet" href="./css/active.css">
+  <script src="./js/mycard.js"></script>
+</head>
 
 <body>
-    <div id = "container">
-        <header>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="mycard.html">My Card</a></li>
-                <li><a href="support.html">Support</a></li>
-            </ul>
-        </header>
+  <div id="container">
+    <header>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="mycard.html">My Card</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <div class="ul_border"></div>
+    </header>
 
-        <!-- Container 1 -->
-        <div class="content" id ="contentOne">
-            <div class="left">
-                <img src="./images/AssetB.png" height="270px" width="430px">
-            </div>
-            <div class="right">
-                <h2 class= "heading" id="head1">Enter Your MetroCard Number:</h2>
-                <div class="text">
-                    <input id="metrocardNum" type="number" onkeypress="return event.charCode >= 48" required>
-                </div>
-
-                <a class="button" onclick="notNullNumber()"> View My Card</a>
-            </div>
+    <!-- Container 1 -->
+    <div class="content" id="contentOne">
+      <div class="left">
+        <img src="./images/AssetB.png" height="270px" width="430px">
+      </div>
+      <div class="right">
+        <h2 class="heading" id="head1">Enter Your MetroCard Number:</h2>
+        <div class="text">
+          <input id="metrocardNum" type="number" onkeypress="return event.charCode >= 48" required>
         </div>
+        <div class="hidden_div">
+          <div class="errormsg" id="metrocardNumError">
 
-        <!-- Container 2 -->
-        <div class="content" id ="contentTwo">
-            <div class="left">
-                <img src="./images/Asset.png" height="270px" width="430px">
-            </div>
-            <div class="right">
-                <h2 class="heading"> MetroCard #<span id="metroNum"></span> </h2>
-                <div class="text">
-                    <p id="p2"> Balance: $<span id="balance"></span> </p>
-                    <p id="p2"> 7-Day Unlimited </p>
-                    <p id="p2"> Expires 5/10/20 </p>
-
-                </div>
-                <a class="button" onclick="showContentThree()"> Add Funds</a>
-                <a class="button" href="mycard.html"> Check New Card</a>
-            </div>
+          </div>
         </div>
+        <a class="button" onclick="notNullNumber()"> View My Card</a>
+      </div>
+    </div>
 
-        <!-- Container 3 -->
-        <div class="content" id ="contentThree">
-            <div class="left">
-                <img src="./images/Asset.png" height="270px" width="430px">
-            </div>
-            <div class="right">
-                <h2 class= "heading" id="head1">MetroCard #<span id="metroNum2"></span></h2>
-                <h2 class= "heading" id="head1">Balance: $<span id="balance2"></span></h2>
-                <hr style="width: 50%;">
+    <!-- Container 2 -->
+    <div class="content" id="contentTwo">
+      <div class="left">
+        <img src="./images/Asset.png" height="270px" width="430px">
+      </div>
+      <div class="right">
+        <h2 class="heading"> MetroCard #<span id="metroNum"></span> </h2>
+        <div class="text">
+          <p id="p2"> Balance: $<span id="balance"></span> </p>
+          <p id="p2"> 7-Day Unlimited </p>
+          <p id="p2"> Expires 5/10/20 </p>
 
-                <div class="text">
-                    <p id="quickAdd"> Quick Add: </p>
-                    <a class="button sel" onclick="oneride()">1 Ride</a>
-                    <a class="button sel" onclick="tenrides()">10 Rides</a>
-                    <a class="button sel" onclick="fiveAmount()"> $5.00</a>
-                    <a class="button sel" onclick="twentyAmount()"> $20.00</a>
-                    <p id="unlimitedRides"> Unlimited Cards: </p>
-                    <a class="button sel" onclick="weekrides()"> 7 Day($33.00)</a>
-                    <a class="button sel" onclick="monthrides()"> 30 Day($127.00)</a>
-                    <br>
-                    <p id="otherRide" style="display: inline-block;"> Other: </p>
-                    <input id="input1" type="number"  min = "0" onkeypress="return event.charCode >= 48" onmouseup="otherride()" onkeyup="otherride()" for="otherRide">
-                    <br>
-                    <div id="">
-                        <p id="totalPrice" style="display: inline-block; width: 40px; padding-right:20px;"></p>
-                        <a class="button" id="add" onclick="showContentFour()"> Add</a>
-                    </div>
-                </div>
-            </div>
         </div>
+        <a class="button" onclick="showContentThree()"> Add Funds</a>
+        <a class="button" href="mycard.html"> Check New Card</a>
+      </div>
+    </div>
 
-        <!-- Container 4 -->
-        <div class="content" id ="contentFour">
-            <div class="right">
-                <h2 class= "heading" id="head1">Order Summary</h2>
-                <div class="text">
-                    <p id="p2"> MetroCard #<span id="metroNum3"></span> </p>
-                    <p id="p2"> Current Balance: $<span id="balance3"></span></p>
-                    <hr style="width: 50%;">
-                    <p id="p2"> Order Type: <span id="orderType"></span></p>
-                    <p id="p2"> Amount Added: <span id="amounts"></span></p>
-                    <p id="p2"> Final Balance: $<span id="total2"></span> </p>
-                    <hr style="width: 50%;">
-                    <p id="p2" style="font-weight: 800;"> Charge Amount: <span id="amounts2"></span> </p>
-                </div>
-                <img src="./images/AssetB.png" height="135px" width="215px">
-            </div>
-            <div class="right">
-                <h2 class= "heading" id="head1">Billing Information</h2>
-                <hr style="width: 50%;">
+    <!-- Container 3 -->
+    <div class="content" id="contentThree">
+      <div class="left">
+        <img src="./images/Asset.png" height="270px" width="430px">
+      </div>
+      <div class="right">
+        <h2 class="heading" id="head1">MetroCard #<span id="metroNum2"></span></h2>
+        <h2 class="heading" id="head1">Balance: $<span id="balance2"></span></h2>
+        <hr style="width: 50%;">
 
-                <div class="text" >
-                    <table>
-                        <tr> <td>First Name</td> <td>Last Name</td></tr>
-                        <tr> <td><input type="text" id="firstN" required></td> <td><input type="text" id="lastN" required></td></tr>
-                        <tr> <td>City</td> <td>State</td></tr>
-                        <tr> <td><input type="text" id="city" required></td> <td><input type="text" id="state" required></td></tr>
-                    </table>
-                    <table class="two">
-                        <tr> <td>Billing Address</td></tr>
-                        <tr> <td><input type="text" style="width:100%" id="address" required></td></tr>
-                    </table>
-                    <table>
-                        <tr> <td>Country</td> <td>Zip Code</td></tr>
-                        <tr> <td><input type="text" id="county" required></td> <td><input type="text" id="zip" placeholder="00000" maxlength="5" pattern="\d*" required></td></tr>
-                    </table>
-                    <table class="two">
-                        <tr> <td>Credit Card Number</td></tr>
-                        <tr> <td><input type="text" style="width:100%" id="ccn" placeholder="0000 0000 0000 0000" pattern="\d*" required></td></tr>
-                    </table>
-                    <table>
-                        <tr> <td>CVC Number</td> <td>Exp Date</td></tr>
-                        <tr> <td><input type="text" id="cvc" placeholder="000" maxlength="3" pattern="\d*" required></td> <td><input type="text" id="expD" placeholder="00/0000" maxlength="7" pattern="\d*" required></td></tr>
-                    </table>
-                    <input type="submit" id="submitP" class="button" onclick="executeSubmit()">
-                </div>
-            </div>
+        <div class="text">
+          <p id="quickAdd"> Quick Add: </p>
+          <a class="button sel" onclick="oneride()">1 Ride</a>
+          <a class="button sel" onclick="tenrides()">10 Rides</a>
+          <a class="button sel" onclick="fiveAmount()"> $5.00</a>
+          <a class="button sel" onclick="twentyAmount()"> $20.00</a>
+          <p id="unlimitedRides"> Unlimited Cards: </p>
+          <a class="button sel" onclick="weekrides()"> 7 Day($33.00)</a>
+          <a class="button sel" onclick="monthrides()"> 30 Day($127.00)</a>
+          <br>
+          <p id="otherRide" style="display: inline-block;"> Other: </p>
+          <input id="input1" type="number" min="0" onkeypress="return event.charCode >= 48" onmouseup="otherride()" onkeyup="otherride()" for="otherRide">
+          <br>
+          <div id="">
+            <p id="totalPrice" style="display: inline-block; width: 40px; padding-right:20px;"></p>
+            <a class="button" id="add" onclick="showContentFour()">Add</a>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Container 4 -->
+    <div class="content" id="contentFour">
+      <div class="right">
+        <h2 class="heading" id="head1">Order Summary</h2>
+        <div class="text">
+          <p id="p2"> MetroCard #<span id="metroNum3"></span> </p>
+          <p id="p2"> Current Balance: $<span id="balance3"></span></p>
+          <hr style="width: 50%;">
+          <p id="p2"> Order Type: <span id="orderType"></span></p>
+          <p id="p2"> Amount Added: <span id="amounts"></span></p>
+          <p id="p2"> Final Balance: $<span id="total2"></span> </p>
+          <hr style="width: 50%;">
+          <p id="p2" style="font-weight: 800;"> Charge Amount: <span id="amounts2"></span> </p>
+        </div>
+        <img src="./images/AssetB.png" height="135px" width="215px">
+      </div>
+      <div class="right">
+        <h2 class="heading" id="head1">Billing Information</h2>
+        <hr style="width: 50%;">
+
+        <div class="text">
+          <table>
+            <tr>
+              <td>First Name</td>
+              <td>Last Name</td>
+            </tr>
+            <tr>
+              <td><input type="text" id="firstN" required></td>
+              <td><input type="text" id="lastN" required></td>
+            </tr>
+            <tr>
+              <td>City</td>
+              <td>State</td>
+            </tr>
+            <tr>
+              <td><input type="text" id="city" required></td>
+              <td><input type="text" id="state" required></td>
+            </tr>
+          </table>
+          <table class="two">
+            <tr>
+              <td>Billing Address</td>
+            </tr>
+            <tr>
+              <td><input type="text" style="width:100%" id="address" required></td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>Country</td>
+              <td>Zip Code</td>
+            </tr>
+            <tr>
+              <td><input type="text" id="county" required></td>
+              <td><input type="text" id="zip" placeholder="00000" maxlength="5" pattern="\d*" required></td>
+            </tr>
+          </table>
+          <table class="two">
+            <tr>
+              <td>Credit Card Number</td>
+            </tr>
+            <tr>
+              <td><input type="text" style="width:100%" id="ccn" placeholder="0000 0000 0000 0000" pattern="\d*" required></td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>CVC Number</td>
+              <td>Exp Date</td>
+            </tr>
+            <tr>
+              <td><input type="text" id="cvc" placeholder="000" maxlength="3" pattern="\d*" required></td>
+              <td><input type="text" id="expD" placeholder="00/0000" maxlength="7" pattern="\d*" required></td>
+            </tr>
+          </table>
+          <a class="button" onclick="executeSubmit()">Submit Order</a>
+        </div>
+      </div>
+    </div>
 
     <footer>
 
     </footer>
-</div>
+  </div>
 </body>
 <script src="mycard.js"> </script>
 

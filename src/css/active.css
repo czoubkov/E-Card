@@ -13,7 +13,6 @@ html,body{
     height: 100%;
 }
 header{
-
     flex: 0 1 auto;
     height: 50px;
     text-align: center;
@@ -26,8 +25,18 @@ ul{
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    background: white;
+    background-image: linear-gradient(#7ec3f1, #94bfdb);
     align-items: center;
+    font-family: "Arial", Gadget, sans-serif;
+    text-shadow: 0px 1px 2px black;
+    padding: 0px;
+}
+.ul_border{
+  background-color: #ffffff;
+  position: fixed;
+  padding-top: 5px;
+  width: 100%;
+  box-shadow: 0px 5px 6px -2px rgba(0, 0, 0, .8);
 }
 li{
     margin: 15px 0;
@@ -37,12 +46,12 @@ li{
 }
 li a{
     text-decoration: none;
-    color: #393737;
-    background: white;
+    color: white;
+    background-image: linear-gradient(#7ec3f1, #97bed8);
     padding: 15px 20px 15px 20px;
 }
 li a:hover{
-    background: #c7d8e2;
+    background: #75a0bd;
 }
 
 .content{
@@ -109,10 +118,13 @@ p{
     font-weight: 900;
     font-size: 20px;
     color: white;
-    background: #9fbbce;
+    background-image: linear-gradient(#7ec3f1, #94bfdb);
     border-radius: 20px;
     margin: 20px 0;
     cursor: pointer;
+    font-family: "Arial", Gadget, sans-serif;
+    text-shadow: 0px 1px 2px black;
+    box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, .8);
 }
 .button .sel{
     border-radius: 20px;
@@ -122,9 +134,12 @@ p{
     border-radius: 20px;
     margin: 0px 0;
 }
-
 .button:hover{
-    background: #c7d8e2;
+    background: #75a0bd;
+}
+.button:active{
+  transform: translateY(2px);
+  box-shadow: 0px 1px 5px -2px rgba(0, 0, 0, .8);
 }
 
 input{
@@ -144,7 +159,12 @@ input:invalid {
 }
 
 input:valid {
-  border: 2px solid darkgreen;
+  border: 2px solid #00C800;
+}
+
+input:invalid:focus {
+    border: 1;
+    box-shadow: 0 0 4px 1px rgba(200, 0, 0, 1);
 }
 
 #head1{
