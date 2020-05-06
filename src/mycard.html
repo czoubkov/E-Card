@@ -114,15 +114,15 @@
                     </table>
                     <table>
                         <tr> <td>Country</td> <td>Zip Code</td></tr>
-                        <tr> <td><input type="text" id="county" onblur="checkSubmit(submitP)" required></td> <td><input type="text" id="zip" onblur="checkSubmit(submitP)" required></td></tr>
+                        <tr> <td><input type="number" id="county" placeholder="00000" onblur="checkSubmit(submitP)" required></td> <td><input type="text" id="zip" onblur="checkSubmit(submitP)" maxlength="5" required></td></tr>
                     </table>
                     <table class="two">
                         <tr> <td>Credit Card Number</td></tr>
-                        <tr> <td><input type="text" style="width:100%" id="ccn" onblur="checkSubmit(submitP)" required></td></tr>
+                        <tr> <td><input type="number" style="width:100%" id="ccn" onblur="checkSubmit(submitP)" required></td></tr>
                     </table>
                     <table>
                         <tr> <td>CVC Number</td> <td>Exp Date</td></tr>
-                        <tr> <td><input type="text" id="cvc" onblur="checkSubmit(submitP)" required></td> <td><input type="text" id="expD" onblur="checkSubmit(submitP)" required></td></tr>
+                        <tr> <td><input type="number" id="cvc" onblur="checkSubmit(submitP)" maxlength="3" required></td> <td><input type="text" id="expD" placeholder="00/0000" onblur="checkSubmit(submitP)" maxlength="7" required></td></tr>
                     </table>
                     <input type="submit" id="submitP" class="button" onclick="executeSubmit()" disabled>
                 </div>
