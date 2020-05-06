@@ -129,11 +129,12 @@ function contactSupport(){
 function notNullNumber(){
   element = document.getElementById("metrocardNum");
   if (element.value.match(/[0-9]/g)) {
+    element.setCustomValidity('');
     showContentTwo();
     return true;
   }
   else {
-    alert("MetroCard Number cannot be blank!");
+    element.setCustomValidity('MetroCard Number cannot be blank!');
     return false;
   }
 }
