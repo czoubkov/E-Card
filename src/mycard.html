@@ -141,7 +141,7 @@
           </tr>
           <tr>
             <td><input type="text" id="country" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo" required></td>
-            <td><input type="text" id="zip" placeholder="00000" maxlength="5" onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
+            <td><input type="text" id="zip" placeholder="00000" minlength="5" maxlength="5" onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
           </tr>
         </table>
         <table class="two">
@@ -153,6 +153,8 @@
             <script>
             document.getElementById('ccn').addEventListener('input', function (e) {
               e.target.value = e.target.value.replace(/[^\d]/g, '').replace(/(.{4})/g, '$1 ').trim();
+              if (e.target.length !== e.target.maxlength())
+                e.target.
             });
             </script>
           </tr>
@@ -163,8 +165,34 @@
             <td>Exp Date</td>
           </tr>
           <tr>
-            <td><input type="text" id="cvc" placeholder="000" maxlength="3" onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
-            <td><input type="text" id="expD" placeholder="00/0000" maxlength="7" onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
+            <td><input type="text" id="cvc" placeholder="000" minlength="3" maxlength="3" onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
+            <select class="billinginfo" required>
+              <option value="01">January</option>
+              <option value="02">February </option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+            <select class="billinginfo" required>
+              <option value="13"> 2020</option>
+              <option value="14"> 2021</option>
+              <option value="15"> 2022</option>
+              <option value="16"> 2023</option>
+              <option value="17"> 2024</option>
+              <option value="18"> 2025</option>
+              <option value="19"> 2026</option>
+              <option value="20"> 2027</option>
+              <option value="21"> 2028</option>
+              <option value="22"> 2029</option>
+
+            </select>
           </tr>
         </table>
         <a class="button" onclick="checkSubmit()">Submit Order</a>
