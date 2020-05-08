@@ -139,7 +139,7 @@ p{
   box-shadow: 0px 1px 5px -2px rgba(0, 0, 0, .8);
 }
 
-input{
+input, select{
     border-radius: 20px;
     padding: 10px;
     border: none;
@@ -151,11 +151,11 @@ input[type=button], input[type=submit] {
   border: none;
 }
 
-input:invalid {
+input:invalid, select:invalid {
   border: 2px solid red;
 }
 
-input:valid {
+input:valid, select:valid {
   border: 2px solid #00C800;
 }
 
@@ -204,21 +204,23 @@ input[type=number] {
 
 #contentFour{
     overflow-y: scroll;
+    height: 500px;
+    padding-top: 50px;
 }
 
-        /* width */
-        ::-webkit-scrollbar {
-            width: 20px;
-          }
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
           
-          /* Track */
-          ::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 5px #E7F2FD; 
-            border-radius: 10px;
-          }
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #E7F2FD; 
+    border-radius: 10px;
+}
            
-          /* Handle */
-          ::-webkit-scrollbar-thumb {
-            background: #ECF4FC; 
-            border-radius: 10px;
-          }
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ECF4FC; 
+    border-radius: 10px;
+}
