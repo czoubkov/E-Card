@@ -114,16 +114,16 @@
               <td>Last Name</td>
             </tr>
             <tr>
-              <td><input type="text" id="firstN" onkeypress="return /[a-z]/i.test(event.key)" required></td>
-              <td><input type="text" id="lastN" onkeypress="return /[a-z]/i.test(event.key)" required></td>
+              <td><input type="text" id="firstN" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo" required></td>
+              <td><input type="text" id="lastN" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo" required></td>
             </tr>
             <tr>
               <td>City</td>
               <td>State</td>
             </tr>
             <tr>
-              <td><input type="text" id="city" onkeypress="return /[a-z]/i.test(event.key)" required></td>
-              <td><input type="text" id="state" required></td>
+              <td><input type="text" id="city" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo" required></td>
+              <td><input type="text" id="state" class="billinginfo"required></td>
             </tr>
           </table>
           <table class="two">
@@ -131,7 +131,7 @@
               <td>Billing Address</td>
             </tr>
             <tr>
-              <td><input type="text" style="width:100%" id="address" required></td>
+              <td><input type="text" style="width:100%" id="address" class="billinginfo" required></td>
             </tr>
           </table>
           <table>
@@ -140,8 +140,8 @@
               <td>Zip Code</td>
             </tr>
             <tr>
-              <td><input type="text" id="country" onkeypress="return /[a-z]/i.test(event.key)" required></td>
-              <td><input type="text" id="zip" placeholder="00000" maxlength="5" onkeypress="return /^[0-9]$/i.test(event.key)" required></td>
+              <td><input type="text" id="country" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo" required></td>
+              <td><input type="text" id="zip" placeholder="00000" maxlength="5" onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
             </tr>
           </table>
           <table class="two">
@@ -149,7 +149,7 @@
               <td>Credit Card Number</td>
             </tr>
             <tr>
-              <td><input type="text" style="width:100%" placeholder="0000 0000 0000 0000" maxlength="20" onkeypress="return /^[0-9]$/i.test(event.key)" required></td>
+              <td><input type="text" style="width:100%" placeholder="0000 0000 0000 0000" maxlength="20" onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
             </tr>
           </table>
           <table>
@@ -158,8 +158,8 @@
               <td>Exp Date</td>
             </tr>
             <tr>
-              <td><input type="text" id="cvc" placeholder="000" maxlength="3" onkeypress="return /^[0-9]$/i.test(event.key)" required></td>
-              <td><input type="text" id="expD" placeholder="00/0000" maxlength="7" onkeypress="return /^[0-9]$/i.test(event.key)" required></td>
+              <td><input type="text" id="cvc" placeholder="000" maxlength="3" onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
+              <td><input type="text" id="expD" placeholder="00/0000" maxlength="7" onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
             </tr>
           </table>
           <a class="button" onclick="checkSubmit()">Submit Order</a>

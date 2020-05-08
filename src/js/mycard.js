@@ -140,18 +140,17 @@ function notNullNumber(){
   }
 }
 
-function checkSubmit(element) {
-  if (document.querySelectorAll( ":invalid" )) {
-    document.querySelectorAll( ":invalid" )[0].focus();
+function checkSubmit() {
+  console.log(document.querySelectorAll( ".billinginfo:invalid"));
+  var numInvalid = document.querySelectorAll( ".billinginfo:invalid").length;
+  console.log(numInvalid);
+
+  if (numInvalid > 0) {
+    document.querySelectorAll( ".billinginfo:invalid")[0].focus();
   }
   else {
-  executeSubmit();
-  }
-}
-
-
-function executeSubmit() {
   alert("Success!");
+  }
 }
 
 function checkAdd() {
