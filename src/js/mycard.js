@@ -43,6 +43,8 @@ function otherride(){
     totalPrice = document.getElementById("input1").value;
     console.log(totalPrice)
     document.getElementById("totalPrice").innerHTML = "$" + totalPrice;
+    if (document.getElementById("totalPrice").innerHTML === "$")
+      document.getElementById("totalPrice").innerHTML = "$0.00";
 }
 
 
@@ -60,6 +62,7 @@ function showContentThree(){
     var metroNums = document.getElementById("metrocardNum").value;
     document.getElementById("metroNum2").innerHTML = metroNums;
     document.getElementById("balance2").innerHTML = balance.toFixed(2);
+    document.getElementById("totalPrice").innerHTML = "$0.00";
 }
 
 function showContentFour(){
@@ -148,4 +151,17 @@ function checkSubmit(element){
 
 function executeSubmit() {
   alert("Success!");
+}
+
+function checkAdd() {
+  price = document.getElementById("totalPrice");
+  if (price.value === "$0.00") {
+    document.getElementById("add").setCustomValidity('Cannot continue if your adding nothing to your balance');
+    return false;
+  }
+  else {
+    document.getElementById("add").setCustomValidity('');
+    showContentFour();
+    return true;
+  }
 }
