@@ -155,7 +155,7 @@ function executeSubmit() {
 
 function checkAdd() {
   price = document.getElementById("totalPrice");
-  if (price.value === "$0.00") {
+  if (price.value.match(/\$0\.00/g)) {
     document.getElementById("add").setCustomValidity('Cannot continue if your adding nothing to your balance');
     return false;
   }
