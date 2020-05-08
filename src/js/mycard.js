@@ -135,6 +135,7 @@ function notNullNumber(){
   }
   else {
     element.setCustomValidity('MetroCard Number cannot be blank!');
+    document.querySelectorAll( ":invalid" )[0].focus();
     return false;
   }
 }
