@@ -179,7 +179,7 @@ table{
 table input{
     width: 100%;
 }
-td{
+td,th{
     padding-left: 10px;
     padding-right: 10px;
     font-family: "Arial", Gadget, sans-serif;
