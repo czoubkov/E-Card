@@ -90,3 +90,7 @@ select{
 select:valid {
   border: none;
 }
+
+#submit{
+    border:none;
+}
