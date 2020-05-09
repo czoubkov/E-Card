@@ -124,7 +124,7 @@ function onlyMoneyValues(key) {
 
 function checkNumberSize() {
   element = document.getElementById("metrocardNum");
-  if (element.value.legnth === 9) {
+  if (element.value.length === 9) {
     element.setCustomValidity('');
     return true;
   }
