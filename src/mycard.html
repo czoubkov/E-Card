@@ -26,7 +26,7 @@
         <img src="./images/AssetB.png" alt="A MetroCard Back" height="270" width="430">
       </div>
       <div class="right">
-        <label for="metrocardNum"><h2 class="heading head1">Enter your 10 digit MetroCard #</h2></label>
+        <label for="metrocardNum" class="heading head1">Enter your 10 digit MetroCard #</label>
         <div class="text">
           <input id="metrocardNum" type="text" minlength="10" maxlength="10" onkeyup="return checkNumberSize()"
             pattern=".{10,10}" onkeypress="return /^[0-9]$/i.test(event.key)" required>
@@ -78,7 +78,7 @@
           <button class="button sel" onclick="weekrides()"> 7 Day($33.00)</button>
           <button class="button sel" onclick="monthrides()"> 30 Day($127.00)</button>
           <br>
-          <label for="input1"><p id="otherRide" style="display: inline-block;"> Other: </p></label>
+          <label for="input1" id="otherRide" style="display: inline-block;"> Other: </label>
           <input id="input1" type="text" onkeypress="return /[0-9.]/i.test(event.key)" onmouseup="otherride()"
             onkeyup="otherride()" maxlength="12">
           <br>
