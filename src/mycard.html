@@ -11,7 +11,7 @@
 
 <body>
   <div id="container">
-    <header>
+    <header role="banner">
       <ul>
         <li><a href="home.html">Home</a></li>
         <li><a href="mycard.html">My Card</a></li>
@@ -23,7 +23,8 @@
     <!-- Container 1 -->
     <div class="content" id="contentOne">
       <div class="left">
-        <img src="./images/AssetB.png" alt="A MetroCard Back" height="270" width="430">
+        <img src="./images/AssetB.png" alt="Back of a MetroCard, showing location of MetroCard Number"
+         height="270" width="430">
       </div>
       <div class="right">
         <label for="metrocardNum" class="heading head1">Enter your 10 digit MetroCard #</label>
@@ -31,41 +32,36 @@
           <input id="metrocardNum" type="text" minlength="10" maxlength="10" onkeyup="return checkNumberSize()"
             pattern=".{10,10}" onkeypress="return /^[0-9]$/i.test(event.key)" required>
         </div>
-        <div class="hidden_div">
-          <div class="errormsg" id="metrocardNumError">
-
-          </div>
-        </div>
-        <button class="button" onclick="notNullNumber()"> View My Card</button>
+        <button class="button" role="button" onclick="notNullNumber()"> View My Card</button>
       </div>
     </div>
 
     <!-- Container 2 -->
     <div class="content" id="contentTwo">
       <div class="left">
-        <img src="./images/Asset.png" alt="A MetroCard Front" height="270" width="430">
+        <img src="./images/Asset.png" alt="Front of a MetroCard" height="270" width="430">
       </div>
       <div class="right">
-        <h2 class="heading"> MetroCard #<span id="metroNum"></span> </h2>
+        <h1 class="heading"> MetroCard #<span id="metroNum"></span> </h1>
         <div class="text">
           <p class="p2"> Balance: $<span id="balance"></span> </p>
           <p class="p2"> 7-Day Unlimited </p>
           <p class="p2"> Expires 05/10/2020 </p>
 
         </div>
-        <button class="button" onclick="showContentThree()"> Add Funds</button>
-        <button class="button" onclick="location.href='mycard.html';"> Check New Card</button>
+          <button class="button" role="button" onclick="showContentThree()"> Add Funds</button>
+          <button class="button" role="button" onclick="location.href='mycard.html';"> Check New Card</button>
       </div>
     </div>
 
     <!-- Container 3 -->
     <div class="content" id="contentThree">
       <div class="left">
-        <img src="./images/Asset.png" alt="A MetroCard Front" height="270" width="430">
+        <img src="./images/Asset.png" alt="Front of a MetroCard" height="270" width="430">
       </div>
       <div class="right">
-        <h2 class="heading head1">MetroCard #<span id="metroNum2"></span></h2>
-        <h2 class="heading head1">Balance: $<span id="balance2"></span></h2>
+        <h1 class="heading head1">MetroCard #<span id="metroNum2"></span></h1>
+        <h1 class="heading head1">Balance: $<span id="balance2"></span></h1>
         <hr style="width: 50%;">
 
         <div class="text">
@@ -83,8 +79,8 @@
             onkeyup="otherride()" maxlength="12">
           <br>
           <div>
-            <p id="totalPrice" style="display: inline-block; width: 40px; padding-right:20px;"></p>
-            <button class="button" id="add" onclick="checkAdd()">Add</button>
+            <p id="totalPrice" style="display: inline-block; width: 40px; padding-right:50px;"></p>
+            <button class="button" role="button" id="add" onclick="checkAdd()">Add</button>
           </div>
         </div>
       </div>
@@ -93,26 +89,26 @@
     <!-- Container 4 -->
     <div class="content" id="contentFour">
       <div class="right">
-        <h2 class="heading head1">Order Summary</h2>
+        <h1 class="heading head1">Order Preview</h1>
         <div class="text">
           <p class="p2"> MetroCard #<span id="metroNum3"></span> </p>
           <p class="p2"> Current Balance: $<span id="balance3"></span></p>
           <hr style="width: 50%;">
           <p class="p2"> Order Type: <span id="orderType"></span></p>
-          <p class="p2"> Amount Added: <span id="amounts"></span></p>
+          <p class="p2"> Amount To Be Added: <span id="amounts"></span></p>
           <p class="p2"> Final Balance: $<span id="total2"></span> </p>
           <hr style="width: 50%;">
           <p class="p2" style="font-weight: 800;"> Charge Amount: <span id="amounts2"></span> </p>
         </div>
-        <img src="./images/AssetB.png" alt="A MetroCard Back" height="135" width="215">
+        <img src="./images/AssetB.png" alt="Back of a MetroCard" height="135" width="215">
       </div>
       <div class="right">
-        <h2 class="heading head1">Billing Information</h2>
+        <h1 class="heading head1">Billing Information</h1>
         <hr style="width: 50%;">
 
         <div class="text">
           <form id="billingForm">
-          <table>
+          <table role="form">
             <tr>
               <th><label for="firstN">First Name</label></th>
               <th><label for="lastN">Last Name</label></th>
@@ -190,7 +186,7 @@
               </td>
             </tr>
           </table>
-          <button class="button" onclick="checkSubmit()">Submit Order</button>
+          <button class="button" role="button" onclick="checkSubmit()">Submit Order</button>
           </form>
         </div>
       </div>
