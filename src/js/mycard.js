@@ -122,24 +122,37 @@ function onlyMoneyValues(key) {
   return true;
 }
 
-function notNullNumber() {
+function checkNumberSize() {
   element = document.getElementById("metrocardNum");
-  if (element.value.match(/[0-9]/g)) {
-    if (element.value.length === 9) {
-      element.setCustomValidity('');
-      showContentTwo();
-      return true;
-    }
-    else {
-      element.setCustomValidity('Invalid');
-      document.querySelectorAll(" :invalid")[0].focus();
-      return false;
-    }
+  if (element.value.legnth === 9) {
+    element.setCustomValidity('');
+    return true;
   }
   else {
-    element.setCustomValidity('MetroCard Number cannot be blank!');
-    document.querySelectorAll(":invalid")[0].focus();
+    element.setCustomValidity('Not yet');
     return false;
+  }
+}
+
+function notNullNumber() {
+  if (checkNumberSize()) {
+    element = document.getElementById("metrocardNum");
+    if (element.value.match(/[0-9]/g)) {
+      if (element.value.length === 9) {
+        showContentTwo();
+        return true;
+      }
+      else {
+        element.setCustomValidity('Invalid');
+        document.querySelectorAll(":invalid")[0].focus();
+        return false;
+      }
+    }
+    else {
+      element.setCustomValidity('MetroCard Number cannot be blank!');
+      document.querySelectorAll(":invalid")[0].focus();
+      return false;
+    }
   }
 }
 
