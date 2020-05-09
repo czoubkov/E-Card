@@ -153,8 +153,15 @@
               <script>
                 document.getElementById('ccn').addEventListener('input', function(e) {
                   e.target.value = e.target.value.replace(/[^\d]/g, '').replace(/(.{4})/g, '$1 ').trim();
-                  if (e.target.length !== e.target.maxlength())
-                    e.target.
+                  if (e.target.value.length >= e.target.maxLength) {
+                    e.target.value = e.target.value.slice(0, e.target.maxLength);
+                    e.target.value.setCustomValidity('Invalid');
+                    e.preventDefault();
+                    return;
+                  }
+                  else {
+                    e.target.value.setCustomValidity('');
+                  }
                 });
               </script>
             </tr>
