@@ -167,7 +167,10 @@
             <tr>
               <td><input type="text" id="cvc" placeholder="000" minlength="3" maxlength="3" onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
               <td>
-                <select class="billinginfoEXP" required>
+                <select class="billinginfo" id="month" required>
+                  <option value="none" selected disabled hidden>
+                    Month
+                  </option>
                   <option value="01">January</option>
                   <option value="02">February </option>
                   <option value="03">March</option>
@@ -181,7 +184,10 @@
                   <option value="11">November</option>
                   <option value="12">December</option>
                 </select>
-                <select class="billinginfoEXP" required>
+                <select class="billinginfo" id="year" required>
+                  <option value="none" selected disabled hidden>
+                    Year
+                  </option>
                   <option value="13"> 2020</option>
                   <option value="14"> 2021</option>
                   <option value="15"> 2022</option>
