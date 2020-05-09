@@ -78,8 +78,8 @@
           <a class="button sel" onclick="monthrides()"> 30 Day($127.00)</a>
           <br>
           <p id="otherRide" style="display: inline-block;"> Other: </p>
-          <input id="input1" type="number" min="0" onkeypress="return event.charCode >= 48" onmouseup="otherride()"
-            onkeyup="otherride()" for="otherRide">
+          <input id="input1" type="text" onkeypress="return /[0-9.]/i.test(event.key)" onmouseup="otherride()"
+            onkeyup="otherride()" for="otherRide" maxlength="12">
           <br>
           <div id="">
             <p id="totalPrice" style="display: inline-block; width: 40px; padding-right:20px;"></p>
@@ -118,18 +118,19 @@
             </tr>
             <tr>
               <td><input type="text" id="firstN" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo"
-                  required></td>
+                  maxlength="40" required></td>
               <td><input type="text" id="lastN" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo"
-                  required></td>
+                  maxlength="40" required></td>
             </tr>
             <tr>
               <th>City</th>
               <th>State</th>
             </tr>
             <tr>
-              <td><input type="text" id="city" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo"
-                  required></td>
-              <td><input type="text" id="state" class="billinginfo" required></td>
+              <td><input type="text" id="city" onkeypress="return /[a-z ]/i.test(event.key)" class="billinginfo"
+                  maxlength="30" required></td>
+              <td><input type="text" id="state" onkeypress="return /[a-z ]/i.test(event.key)" class="billinginfo"
+                  maxlength="30" required></td>
             </tr>
           </table>
           <table class="two">
@@ -137,7 +138,7 @@
               <th>Billing Address</th>
             </tr>
             <tr>
-              <td><input type="text" style="width:100%" id="address" class="billinginfo" required></td>
+              <td><input type="text" style="width:100%" id="address" class="billinginfo" maxlength="75" required></td>
             </tr>
           </table>
           <table>
@@ -146,8 +147,8 @@
               <th>Zip Code</th>
             </tr>
             <tr>
-              <td><input type="text" id="country" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo"
-                  required></td>
+              <td><input type="text" id="country" onkeypress="return /[a-z ]/i.test(event.key)" class="billinginfo"
+                  maxlength="60" required></td>
               <td><input type="text" id="zip" placeholder="00000" minlength="5" maxlength="5"
                   onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
             </tr>
