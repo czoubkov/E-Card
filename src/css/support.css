@@ -1,14 +1,18 @@
 html,body{
   background-image: url("../images/Back3.png");
 }
+
 .supportContent{
-    height: 65%;
+    height: 550px;
     overflow-y: scroll;
     display: block;
     flex-direction: row;
     text-align: center;
     justify-content: center;
-    padding-top: 70px;
+    padding-top: 5px;
+    padding-bottom:25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .left{
     align-items: center;
