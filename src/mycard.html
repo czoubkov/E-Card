@@ -36,7 +36,7 @@
 
           </div>
         </div>
-        <a class="button" onclick="notNullNumber()"> View My Card</a>
+        <button class="button" onclick="notNullNumber()"> View My Card</button>
       </div>
     </div>
 
@@ -53,8 +53,8 @@
           <p class="p2"> Expires 05/10/2020 </p>
 
         </div>
-        <a class="button" onclick="showContentThree()"> Add Funds</a>
-        <a class="button" href="mycard.html"> Check New Card</a>
+        <button class="button" onclick="showContentThree()"> Add Funds</button>
+        <button class="button" onclick="location.href='mycard.html';"> Check New Card</button>
       </div>
     </div>
 
@@ -70,13 +70,13 @@
 
         <div class="text">
           <p id="quickAdd"> Quick Add: </p>
-          <a class="button sel" onclick="oneride()">1 Ride</a>
-          <a class="button sel" onclick="tenrides()">10 Rides</a>
-          <a class="button sel" onclick="fiveAmount()"> $5.00</a>
-          <a class="button sel" onclick="twentyAmount()"> $20.00</a>
+          <button class="button sel" onclick="oneride()">1 Ride</button>
+          <button class="button sel" onclick="tenrides()">10 Rides</button>
+          <button class="button sel" onclick="fiveAmount()"> $5.00</button>
+          <button class="button sel" onclick="twentyAmount()"> $20.00</button>
           <p id="unlimitedRides"> Unlimited Cards: </p>
-          <a class="button sel" onclick="weekrides()"> 7 Day($33.00)</a>
-          <a class="button sel" onclick="monthrides()"> 30 Day($127.00)</a>
+          <button class="button sel" onclick="weekrides()"> 7 Day($33.00)</button>
+          <button class="button sel" onclick="monthrides()"> 30 Day($127.00)</button>
           <br>
           <label for="input1"><p id="otherRide" style="display: inline-block;"> Other: </p></label>
           <input id="input1" type="text" onkeypress="return /[0-9.]/i.test(event.key)" onmouseup="otherride()"
@@ -84,7 +84,7 @@
           <br>
           <div>
             <p id="totalPrice" style="display: inline-block; width: 40px; padding-right:20px;"></p>
-            <a class="button" id="add" onclick="checkAdd()">Add</a>
+            <button class="button" id="add" onclick="checkAdd()">Add</button>
           </div>
         </div>
       </div>
@@ -190,7 +190,7 @@
               </td>
             </tr>
           </table>
-          <a class="button" onclick="checkSubmit()">Submit Order</a>
+          <button class="button" onclick="checkSubmit()">Submit Order</button>
           </form>
         </div>
       </div>
