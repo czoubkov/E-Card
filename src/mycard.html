@@ -27,8 +27,7 @@
       <div class="right">
         <h2 class="heading" id="head1">Enter Your MetroCard Number:</h2>
         <div class="text">
-          <input id="metrocardNum" type="text" minlength="9" maxlength="9" onblur="return checkNumberSize()"
-            pattern=".{9,9}" onkeypress="return /^[0-9]$/i.test(event.key)" required>
+          <input id="metrocardNum" type="text" minlength="9" maxlength="9" onblur="return checkNumberSize()" pattern=".{9,9}" onkeypress="return /^[0-9]$/i.test(event.key)" required>
         </div>
         <div class="hidden_div">
           <div class="errormsg" id="metrocardNumError">
@@ -78,8 +77,7 @@
           <a class="button sel" onclick="monthrides()"> 30 Day($127.00)</a>
           <br>
           <p id="otherRide" style="display: inline-block;"> Other: </p>
-          <input id="input1" type="number" min="0" onkeypress="return event.charCode >= 48" onmouseup="otherride()"
-            onkeyup="otherride()" for="otherRide">
+          <input id="input1" type="number" min="0" onkeypress="return event.charCode >= 48" onmouseup="otherride()" onkeyup="otherride()" for="otherRide">
           <br>
           <div id="">
             <p id="totalPrice" style="display: inline-block; width: 40px; padding-right:20px;"></p>
@@ -116,18 +114,15 @@
               <td>Last Name</td>
             </tr>
             <tr>
-              <td><input type="text" id="firstN" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo"
-                  required></td>
-              <td><input type="text" id="lastN" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo"
-                  required></td>
+              <td><input type="text" id="firstN" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo" required></td>
+              <td><input type="text" id="lastN" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo" required></td>
             </tr>
             <tr>
               <td>City</td>
               <td>State</td>
             </tr>
             <tr>
-              <td><input type="text" id="city" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo"
-                  required></td>
+              <td><input type="text" id="city" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo" required></td>
               <td><input type="text" id="state" class="billinginfo" required></td>
             </tr>
           </table>
@@ -145,10 +140,8 @@
               <td>Zip Code</td>
             </tr>
             <tr>
-              <td><input type="text" id="country" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo"
-                  required></td>
-              <td><input type="text" id="zip" placeholder="00000" minlength="5" maxlength="5"
-                  onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
+              <td><input type="text" id="country" onkeypress="return /[a-z]/i.test(event.key)" class="billinginfo" required></td>
+              <td><input type="text" id="zip" placeholder="00000" minlength="5" maxlength="5" onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
             </tr>
           </table>
           <table class="two">
@@ -156,18 +149,16 @@
               <td>Credit Card Number</td>
             </tr>
             <tr>
-              <td><input type="text" id="ccn" style="width:100%" placeholder="0000 0000 0000 0000" maxlength="19"
-                  pattern=".{19,19}" onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
+              <td><input type="text" id="ccn" style="width:100%" placeholder="0000 0000 0000 0000" maxlength="19" pattern=".{19,19}" onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
               <script>
-                document.getElementById('ccn').addEventListener('input', function (e) {
+                document.getElementById('ccn').addEventListener('input', function(e) {
                   e.target.value = e.target.value.replace(/[^\d]/g, '').replace(/(.{4})/g, '$1 ').trim();
                   if (e.target.value.length >= e.target.maxLength) {
                     e.target.value = e.target.value.slice(0, e.target.maxLength);
                     e.target.value.setCustomValidity('Invalid');
                     e.preventDefault();
                     return;
-                  }
-                  else {
+                  } else {
                     e.target.value.setCustomValidity('');
                   }
                 });
@@ -180,10 +171,9 @@
               <td>Exp Date</td>
             </tr>
             <tr>
-              <td><input type="text" id="cvc" placeholder="000" minlength="3" maxlength="3"
-                  onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
+              <td><input type="text" id="cvc" placeholder="000" minlength="3" maxlength="3" onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
               <td>
-                <input type="month" id="expDate" name="expDate" min="2020-06" max="2029-12" value="2020-06">
+                <input type="month" id="expDate" name="expDate" min="2020-06" max="2029-12" value="2020-06" class="billinginfo" required>
               </td>
             </tr>
           </table>
