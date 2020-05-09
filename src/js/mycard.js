@@ -130,6 +130,7 @@ function checkNumberSize() {
   }
   else {
     element.setCustomValidity('Not yet');
+    document.getElementById("metrocardNum").focus();
     return false;
   }
 }
@@ -142,15 +143,9 @@ function notNullNumber() {
         showContentTwo();
         return true;
       }
-      else {
-        element.setCustomValidity('Invalid');
-        document.querySelectorAll(":invalid")[0].focus();
-        return false;
-      }
     }
     else {
       element.setCustomValidity('MetroCard Number cannot be blank!');
-      document.querySelectorAll(":invalid")[0].focus();
       return false;
     }
   }
