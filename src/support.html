@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
-  <title> </title>
+  <title>E-Card Support</title>
   <link rel="stylesheet" href="./css/active.css">
   <link rel="stylesheet" href="./css/support.css">
 
@@ -24,7 +24,7 @@
     <div class="supportContent">
       <!-- <div class="left"> -->
       <div>
-        <table>
+        <table id="developerInfo">
           <tr>
             <th>Name</th>
             <th>Role</th>
@@ -55,11 +55,14 @@
       <br>
       <br>
       <div>
+        <label for="supportSelection">Support Type:</label>
+        <br>
         <select class="selection" id="supportSelection">
           <option value="" selected disabled>Please select</option>
           <option value="feedback">Feedback</option>
           <option value="questions">Questions</option>
-        </select>
+        </select><br><br>
+        <label for="supportInput">Input your Feedback or Question:</label>
         <textarea name="" id="supportInput" cols="92" rows="15" maxlength="1520"></textarea>
         <a class="buttonSupport" onclick="contactSupport()">Submit</a>
       </div>
