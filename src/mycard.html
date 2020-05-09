@@ -149,7 +149,7 @@
               <td>Credit Card Number</td>
             </tr>
             <tr>
-              <td><input type="text" id="ccn" style="width:100%" placeholder="0000 0000 0000 0000" maxlength="19" onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
+              <td><input type="text" id="ccn" style="width:100%" placeholder="0000 0000 0000 0000" maxlength="19" pattern=".{19,19}" onkeypress="return /^[0-9]$/i.test(event.key)" class="billinginfo" required></td>
               <script>
                 document.getElementById('ccn').addEventListener('input', function(e) {
                   e.target.value = e.target.value.replace(/[^\d]/g, '').replace(/(.{4})/g, '$1 ').trim();
