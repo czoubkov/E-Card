@@ -125,9 +125,16 @@ function onlyMoneyValues(key) {
 function notNullNumber() {
   element = document.getElementById("metrocardNum");
   if (element.value.match(/[0-9]/g)) {
-    element.setCustomValidity('');
-    showContentTwo();
-    return true;
+    if (element.value.length === 9) {
+      element.setCustomValidity('');
+      showContentTwo();
+      return true;
+    }
+    else {
+      element.setCustomValidity('Invalid');
+      document.querySelectorAll(".billinginfo:invalid")[0].focus();
+      return false;
+    }
   }
   else {
     element.setCustomValidity('MetroCard Number cannot be blank!');
@@ -179,4 +186,3 @@ function contactSupport() {
     supportType.setCustomValidity('Choose a support type');
   }
 }
-
