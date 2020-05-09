@@ -33,7 +33,6 @@ ul{
 }
 .ul_border{
   background-color: #ffffff;
-  position: fixed;
   padding-top: 5px;
   width: 100%;
   box-shadow: 0px 5px 6px -2px rgba(0, 0, 0, .8);

@@ -3,7 +3,6 @@ html,body{
 }
 
 .supportContent{
-    height: 550px;
     overflow-y: scroll;
     display: block;
     flex-direction: row;
@@ -29,11 +28,14 @@ html,body{
     padding: 0;
     margin: 0;
 }
+label{
+  font-family: "Arial", Gadget, sans-serif;
+}
 textarea{
     display: block;
     margin-left: 50%;
     transform: translateX(-50%);
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     border: solid 1px;
     border-radius: 8px;
@@ -91,6 +93,8 @@ select{
     width: 40%;
     text-align: center;
     background: #FFFFFF;
+    margin-top: 10px;
+    margin-bottom: 20px;
 
 }
 select:valid:focus {
