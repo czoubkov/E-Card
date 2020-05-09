@@ -132,7 +132,7 @@ function notNullNumber() {
     }
     else {
       element.setCustomValidity('Invalid');
-      document.querySelectorAll(".billinginfo:invalid")[0].focus();
+      document.querySelectorAll(" :invalid")[0].focus();
       return false;
     }
   }
