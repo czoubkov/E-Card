@@ -39,6 +39,7 @@ textarea{
     border-radius: 8px;
     resize: none;
     width: 40%;
+    outline:none;
 }
 table{
     border: 1px solid #a6a6a6;
