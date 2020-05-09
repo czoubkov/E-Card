@@ -124,7 +124,7 @@ function onlyMoneyValues(key) {
 
 function checkNumberSize() {
   element = document.getElementById("metrocardNum");
-  if (element.value.length === 9) {
+  if (element.value.length === element.maxLength) {
     element.setCustomValidity('');
     return true;
   }
@@ -133,21 +133,13 @@ function checkNumberSize() {
     document.getElementById("metrocardNum").focus();
     return false;
   }
+  return false;
 }
 
 function notNullNumber() {
   if (checkNumberSize()) {
-    element = document.getElementById("metrocardNum");
-    if (element.value.match(/[0-9]/g)) {
-      if (element.value.length === 9) {
-        showContentTwo();
-        return true;
-      }
-    }
-    else {
-      element.setCustomValidity('MetroCard Number cannot be blank!');
-      return false;
-    }
+    showContentTwo();
+    return true;
   }
 }
 
