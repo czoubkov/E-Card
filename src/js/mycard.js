@@ -160,6 +160,7 @@ function checkSubmit() {
     document.querySelectorAll(".billinginfo:invalid")[0].focus();
   }
   else {
+    document.getElementById("billingForm").reset();
     alert("Success!");
   }
 }
