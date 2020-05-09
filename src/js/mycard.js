@@ -122,10 +122,6 @@ function onlyMoneyValues(key) {
   return true;
 }
 
-function contactSupport(){
-  alert("Submitted to our Support Team!");
-}
-
 function notNullNumber(){
   element = document.getElementById("metrocardNum");
   if (element.value.match(/[0-9]/g)) {
@@ -163,3 +159,18 @@ function checkAdd() {
     return true;
   }
 }
+
+function contactSupport(){
+  element = document.getElementById("supportInput");
+  if (element.value != "") {
+    element.setCustomValidity('');
+    alert("Submitted to our Support Team!")
+    return true;
+  }
+  else {
+    element.setCustomValidity('Message cannot be blank!');
+    document.querySelectorAll( ":invalid" )[0].focus();
+    return false;
+  }
+}
+
