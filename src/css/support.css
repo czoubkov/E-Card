@@ -90,9 +90,14 @@ select{
     width: 40%;
     text-align: center;
     background: #FFFFFF;
+
 }
-select:valid {
-  border: none;
+select:valid:focus {
+  box-shadow: none;
+}
+
+select:invalid:focus {
+  box-shadow: none;
 }
 
 #submit{

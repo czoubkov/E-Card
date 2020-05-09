@@ -152,16 +152,11 @@ input[type=button], input[type=submit] {
   border: none;
 }
 
-input:invalid, select:invalid {
-  border: 2px solid red;
+input:valid:focus, select:valid:focus {
+    box-shadow: 0 0 4px 1px rgba(0, 200, 0, 1);
 }
 
-input:valid, select:valid {
-  border: 2px solid #00C800;
-}
-
-input:invalid:focus {
-    border: 1;
+input:invalid:focus, select:invalid:focus {
     box-shadow: 0 0 4px 1px rgba(200, 0, 0, 1);
 }
 
@@ -187,6 +182,7 @@ table input{
 td{
     padding-left: 10px;
     padding-right: 10px;
+    font-family: "Arial", Gadget, sans-serif;
 }
 #contentTwo, #contentThree, #contentFour{
     display: none;
@@ -207,7 +203,7 @@ input[type=number] {
     overflow-y: scroll;
     height: 500px;
     padding-top: 100px;
-    
+
     margin-top: 30px;
     margin-bottom: 30px;
 }
