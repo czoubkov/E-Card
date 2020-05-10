@@ -30,7 +30,7 @@
         <label for="metrocardNum" class="heading head1">Enter your 10 digit MetroCard #</label>
         <div class="text">
           <input id="metrocardNum" type="text" minlength="10" maxlength="10" onkeyup="return checkNumberSize()"
-            pattern=".{10,10}" onkeypress="return /^[0-9]$/i.test(event.key)" required data-toggle="tooltip" data-placement="right" title="Please fill out this field.">
+            pattern=".{10,10}" onkeypress="return /^[0-9]$/i.test(event.key)" data-toggle="tooltip" data-placement="right" required>
         </div>
         <button class="button" role="button" onclick="notNullNumber()"> View My Card</button>
       </div>
