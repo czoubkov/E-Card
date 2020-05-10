@@ -187,3 +187,7 @@ function contactSupport() {
     supportType.setCustomValidity('Choose a support type');
   }
 }
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+});
